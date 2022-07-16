@@ -1,2 +1,2 @@
 # css-tricks
-CSS tricks example for everydaty.
+CSS tricks example for everyday.
