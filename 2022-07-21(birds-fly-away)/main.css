@@ -1,0 +1,112 @@
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+}
+.container {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* padding: 2rem; */
+  background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url("https://images.unsplash.com/photo-1446824505046-e43605ffb17f");
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bird {
+  background-image: url(./bird.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+
+.bird--one {
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+}
+.bird--two {
+  animation-duration: 0.9s;
+  animation-delay: -0.75s;
+}
+.bird--three {
+  animation-duration: 1.25s;
+  animation-delay: -0.25s;
+}
+.bird--four {
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+
+.bird-container {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.bird-container--one {
+  animation-duration: 15s;
+  animation-delay: 0s;
+}
+.bird-container--two {
+  animation-duration: 16s;
+  animation-delay: 1s;
+}
+.bird-container--three {
+  animation-duration: 14.6s;
+  animation-delay: 9.5s;
+}
+.bird-container--four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+  
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  10% {
+    transform: scale(0.4) translateY(2vh) translateX(10vw);
+  }
+
+  20% {
+    transform: scale(0.5) translateY(0vh) translateX(30vw);
+  }
+  30% {
+    transform: scale(0.6) translateY(2vh) translateX(50vw);
+  }
+  40% {
+    transform: scale(0.7) translateY(0vh) translateX(70vw);
+  }
+  50% {
+    transform: scale(0.7) translateY(2vh) translateX(90vw);
+  }
+  60% {
+    transform: scale(0.7) translateY(0vh) translateX(110vw);
+  }
+  100% {
+    transform: scale(0.7) translateX(150vw) translateY(0vh);
+  }
+}
+
