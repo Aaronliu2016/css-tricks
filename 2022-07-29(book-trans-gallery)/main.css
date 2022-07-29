@@ -1,0 +1,130 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mobile-width: 325px;
+  --mobile-height: 670px;
+  --mobile-radius: 25px;
+  --seperator-height: 500px;
+
+  --bg: #fdf3f2;
+  --mobile-bg: #fdeae6;
+
+  --font-color: #807b7b;
+
+  --transition: transform 0.7s ease-in-out;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+}
+
+.mobile-layout {
+  width: var(--mobile-width);
+  height: var(--mobile-height);
+  margin: 30px 0;
+  border-radius: var(--mobile-radius);
+  color: var(--font-color);
+  background-color: var(--mobile-bg);
+  box-shadow: 36px 36px 50px 15px #eed7d1d1;
+  perspective: 500px;
+  overflow: hidden;
+}
+
+.notification-header {
+  position: fixed;
+  top: 5px;
+  width: 100%;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 6;
+}
+
+.actions {
+  position: fixed;
+  top: 37px;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  z-index: 6;
+}
+
+.book-cover {
+  position: relative;
+  height: var(--seperator-height);
+  width: calc(var(--mobile-width) * 2);
+  left: -52.5%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 40%;
+  z-index: 4;
+  transition: var(--transition);
+  background-color: #eed7d1d1;
+}
+
+.book-top {
+  width: 170px;
+  position: absolute;
+  top: 180px;
+  left: 250px;
+  z-index: 5;
+  transform: translateZ(28.5px);
+  border-radius: 5px;
+}
+.book-side {
+  position: absolute;
+  top: 430px;
+  left: 222px;
+  transform: translateX(0px) translateY(-18px) translateZ(15px) rotateX(103deg);
+}
+.book-cover:hover {
+  transform: rotateX(75deg) translateZ(3px) scale(0.75);
+}
+
+.book-cover:hover + .preface {
+  transform: translateY(-302px);
+}
+.book-cover:hover + .preface .icon {
+  transform: rotateX(180deg);
+}
+
+.preface {
+  height: var(--seperator-height);
+  padding: 50px;
+  transition: var(--transition);
+  background-color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.author {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.icon {
+  transform-origin: 50%;
+  transition: var(--transition);
+}
+.body {
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 1.5;
+}
