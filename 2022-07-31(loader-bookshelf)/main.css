@@ -1,0 +1,232 @@
+body {
+  background-color: #1e6cc7;
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+}
+.bookshelf_wrapper {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.book_list {
+  margin: 0 auto;
+  width: 300px;
+  padding: 0%;
+}
+.book_item {
+  position: absolute;
+  top: -120px;
+  box-sizing: border-box;
+  list-style: none;
+  opacity: 0;
+  width: 40px;
+  height: 120px;
+  background-color: #1e6cc7;
+  border: 5px solid #fff;
+  transform: translateX(300px);
+  transform-origin: bottom left;
+  animation: travel 2500ms linear infinite;
+}
+
+@keyframes travel {
+  0% {
+    opacity: 0;
+    transform: translateX(300px) rotateZ(0deg) scaleY(1);
+  }
+  6.5% {
+    transform: translateX(280px) rotateZ(0deg) scaleY(1.1);
+  }
+  9% {
+    transform: translateX(274px) rotateZ(0) scaleY(1);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(270px) rotateZ(0) scaleY(1);
+  }
+  18% {
+    transform: translateX(250px) rotateZ(-30deg);
+  }
+  45% {
+    transform: translateX(165px) roteZ(-30deg);
+  }
+  50% {
+    text-transform: translateX(150px) rotateZ(-45deg);
+  }
+  60% {
+    transform: translateX(115px) rotateZ(-45deg);
+  }
+  67% {
+    transform: translateX(100px) rotateZ(-60deg);
+  }
+  75% {
+    transform: translateX(70px) rotateZ(-60deg);
+  }
+  83.5% {
+    opacity: 1;
+    transform: translateX(50px) rotateZ(-90deg);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0) rotateZ(-90deg);
+  }
+}
+
+.book_item.first {
+  top: -140px;
+  height: 140px;
+}
+.book_item.first::before,
+.book_item.first::after,
+.book_item.fifth::before,
+.book_item.fifth::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+}
+.book_item.first::after, 
+.book_item.fifth::after {
+  top: initial;
+  bottom: 10px;
+}
+
+.book_item.second::before,
+.book_item.second::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 17.5px;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+.book_item.second::after {
+  top: initial;
+  bottom: 10px;
+}
+
+.book_item.third::before,
+.book_item.third::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.book_item.third::after {
+  top: initial;
+  bottom: 10px;
+}
+
+.book_item.fourth {
+  top: -130px;
+  height: 130px;
+}
+.book_item.fourth::before {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  height: 17.5px;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+.book_item.fifth {
+  top: -100px;
+  height: 100px;
+}
+
+.book_item.sixth {
+  top: -140px;
+  height: 140px;
+}
+.book_item.sixth::before {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  bottom: 31px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+}
+.book_item.sixth::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.book_item.second {
+  animation-delay: 420ms;
+}
+.book_item.third {
+  animation-delay: 830ms;
+}
+.book_item.fourth {
+  animation-delay: 1240ms;
+}
+.book_item.fifth {
+  animation-delay: 1650ms;
+}
+.book_item.sixth {
+  animation-delay: 2060ms;
+}
+
+
+.shelf {
+  width: 300px;
+  height: 5px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+}
+.shelf::before,
+.shelf::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1e6cc7;
+  background-image: radial-gradient(rgba(255,255,255,0.5) 30%, transparent 0);
+  background-size: 10px 10px;
+  background-position: 0 --2.5px;
+  top: 200%;
+  left: 5%;
+  animation: move 250ms linear infinite;
+}
+.shelf::after {
+  top: 400%;
+  left: 7.5%;
+}
+
+@keyframes move {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 10px;
+  }
+}
