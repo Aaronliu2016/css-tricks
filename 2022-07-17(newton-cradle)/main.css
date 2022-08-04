@@ -63,7 +63,7 @@ body {
 @keyframes swing2 {
   0% {
     transform: rotate(0deg);
-    amimation-timing-function: linear;
+    animation-timing-function: linear;
   }
   50% {
     transform: rotate(0deg);

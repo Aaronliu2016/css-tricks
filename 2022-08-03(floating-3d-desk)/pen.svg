@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 300" width="406"
+  height="306" class="illustration styles_illustrationTablet__1DWOa">
+  <defs>
+    <linearGradient id="linear-gradient" x1="162.93" y1="213.23" x2="124.46" y2="244.54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d4a397"></stop>
+      <stop offset="1" stop-color="#fff"></stop>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="149.28" y1="151.25" x2="116.6" y2="177.85" xlink:href="#linear-gradient">
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="281.87" y1="174.83" x2="262.34" y2="203.6"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0.01" stop-color="#4d4d4d"></stop>
+      <stop offset="1" stop-color="#fff"></stop>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="317.24" y1="170.92" x2="310.86" y2="180.32"
+      xlink:href="#linear-gradient-3"></linearGradient>
+    <linearGradient id="linear-gradient-5" x1="1786.47" y1="108.38" x2="1772.46" y2="123.73"
+      gradientTransform="translate(-1538.93)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#78b46a"></stop>
+      <stop offset="0.03" stop-color="#7f3500"></stop>
+      <stop offset="1" stop-color="#fff"></stop>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="240.29" y1="150.53" x2="219.46" y2="167.49"
+      xlink:href="#linear-gradient"></linearGradient>
+  </defs>
+  <title>css-tricks</title>
+  <g style="isolation: isolate;">
+    <path xmlns="http://www.w3.org/2000/svg"
+      d="M166.26,257.73a4,4,0,0,1,2.26-3l7.25-4.18,11.2-6.49,13.38-7.75,14.24-8.24,13.77-8,12-6.93,8.85-5.12,4.65-2.69c0,.1.16.1.26.07a3.31,3.31,0,0,1,4,4c-.54,2.1-2.33,3.95-4,5.23a160.8,160.8,0,0,1-16.92,10.62v-2.09c3.94-2.16,12.44-7,16-10.7l-1.7,1-4.68,2.74-7.05,4.12-8.8,5.14L221,231.33l-10.46,6.11-10.36,6.05-9.64,5.64L182.27,254l-6.37,3.72c-1.94,1.14-4.05,2.68-6.31,3.12A3.11,3.11,0,0,1,166.26,257.73Z"
+      fill="#68e1fd" />
+  </g>
+</svg>
