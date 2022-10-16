@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+}
+.sat-loader {
+  width: 7em;
+  --center: 50;
+  --earth-fill: white;
+  --earth-r: 1.75em;
+  --earth-stroke: black;
+  --earth-stroke-width: 4;
+  --orbit-stroke: black;
+  --orbit-stroke-width: 1;
+  --sat-r: 0.6em;
+  --sat-fill: black;
+  --sat-max: 88;
+  --sat-min: 15;
+}
+
+.earth {
+  cx: var(--center);
+  cy: var(--center);
+  r: var(--earth-r);
+  fill: var(--earth-fill);
+  stroke: var(--earth-stroke);
+  stroke-width: var(--earth-stroke-width);
+}
+
+.orbit {
+  cx: var(--center);
+  cy: var(--center);
+  rx: 3em;
+  ry: 0.3em;
+  fill: none;
+  stroke: var(--orbit-stroke);
+  stroke-width: var(--orbit-stroke-width);
+  transform-origin: center;
+  transform: rotate(-45deg);
+  stroke-dasharray: 220 55;
+  stroke-dashoffset: 100;
+}
+
+.sat {
+  r: var(--sat-r);
+  fill: var(--sat-fill);
+}
+.sat-front {
+  animation: sat-orbit 4000ms ease-in-out infinite,
+  orbit-front 4000ms linear infinite;
+}
+.sat-back {
+  animation: sat-orbit 4000ms ease-in-out infinite;
+}
+@keyframes sat-orbit {
+  0% {
+    cx: var(--sat-max);
+    cy: var(--sat-min);
+  }
+  50% {
+    cx: var(--sat-min);
+    cy: var(--sat-max);
+  }
+  100% {
+    cx: var(--sat-max);
+    cy: var(--sat-min);
+  }
+}
+
+@keyframes orbit-front {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
