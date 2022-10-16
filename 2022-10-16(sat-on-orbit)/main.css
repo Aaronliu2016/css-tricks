@@ -14,9 +14,9 @@ body {
   --earth-stroke-width: 4;
   --orbit-stroke: black;
   --orbit-stroke-width: 1;
-  --sat-r: 0.6em;
+  --sat-r: 0.35em;
   --sat-fill: black;
-  --sat-max: 88;
+  --sat-max: 85;
   --sat-min: 15;
 }
 
@@ -33,14 +33,14 @@ body {
   cx: var(--center);
   cy: var(--center);
   rx: 3em;
-  ry: 0.3em;
+  ry: 0.2em;
   fill: none;
   stroke: var(--orbit-stroke);
   stroke-width: var(--orbit-stroke-width);
   transform-origin: center;
   transform: rotate(-45deg);
   stroke-dasharray: 220 55;
-  stroke-dashoffset: 100;
+  stroke-dashoffset: 103;
 }
 
 .sat {
