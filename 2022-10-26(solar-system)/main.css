@@ -1,0 +1,242 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+  background-attachment: fixed;
+}
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+}
+
+.solar-syst {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.solar-syst::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  top: -2px;
+  background: white;
+  border-radius: 100px;
+}
+.solar-syst div {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 999;
+  border-radius: 1000px;
+}
+.solar-syst div:not(.sun) {
+  border: 1px solid rgba(102, 166, 229, 0.15);
+}
+.solar-syst div:not(.sun)::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-radius: 1000px;
+}
+.solar-syst div:not(.asteroid-belt)::before{
+  box-shadow: inset 0 6px 0 -2px rgba(0, 0, 0, 0.25);
+}
+.sun {
+  background: radial-gradient(ellipse at center, #ffd000 1%, #f9b700 39%, #f9b700 39%, #e06317 100%);
+  background-clip: padding-box;
+  background-position: -28px -103px;
+  background-size: 175%;
+  box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
+  border: 0;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+.mercury {
+  height: 70px;
+  width: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  animation: orbit 7.2s linear infinite;
+}
+.mercury::before {
+  height: 4px;
+  width: 4px;
+  background: #9f5e26;
+  margin-left: -2px;
+  margin-top: -2px;
+}
+.venus {
+  height: 100px;
+  width: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  animation: orbit 18.5s linear infinite;
+}
+.venus::before {
+  height: 8px;
+  width: 8px;
+  background: #beb768;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+.earth {
+  height: 145px;
+  width: 145px;
+  margin-top: -72.5px;
+  margin-left: -72.5px;
+  animation: orbit 30s linear infinite;
+}
+.earth::before {
+  height: 6px;
+  width: 6px;
+  background: #11abe9;
+  margin-left: -3px;
+  margin-top: -3px;
+}
+.earth::after {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 50%;
+  top: 0;
+  margin-left: -9px;
+  margin-top: -9px;
+  border-radius: 100px;
+  box-shadow: 0 -10px 0 -8px grey;
+  animation: orbit 2.2s linear infinite;
+}
+.mars {
+  height: 190px;
+  width: 190px;
+  margin-top: -95px;
+  margin-left: -95px;
+  animation: orbit 56.4s linear infinite;
+}
+.mars::before {
+  height: 6px;
+  width: 6px;
+  background: #cf3921;
+  margin-left: -3px;
+  margin-top: -3px;
+}
+.jupiter {
+  height: 340px;
+  width: 340px;
+  margin-top: -170px;
+  margin-left: -170px;
+  animation: orbit 355.7s linear infinite;
+}
+.jupiter::before {
+  height: 18px;
+  width: 18px;
+  background: #c76e2a;
+  margin-left: -9px;
+  margin-top: -9px;
+}
+.saturn {
+  height: 440px;
+  width: 440px;
+  margin-top: -220px;
+  margin-left: -220px;
+  animation: orbit 882.7s linear infinite;
+}
+.saturn::before {
+  height: 12px;
+  width: 12px;
+  background: #e7c194;
+  margin-left: -6px;
+  margin-top: -6px;
+}
+.saturn::after {
+  position: absolute;
+  content: "";
+  height: 2.2%;
+  width: 4.7%;
+  left: 50%;
+  top: 0;
+  box-shadow: 0 1px 0 1px #987641, 3px 1px 0 #987641, 3px 1px 0 #987641;
+  margin-left: -2.35%;
+  margin-top: -1.1%;
+  border-radius: 50%;
+  transform: rotateZ(-52deg);
+  transform-origin: 52% 60%;
+  animation: orbit 882.7s linear infinite;
+  animation-direction: reverse;
+}
+.uranus {
+  height: 520px;
+  width: 520px;
+  margin-top: -260px;
+  margin-left: -260px;
+  animation: orbit 2512.4s linear infinite;
+}
+.uranus::before {
+  height: 10px;
+  width: 10px;
+  background: #b5e3e3;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+.neptune {
+  height: 630px;
+  width: 630px;
+  margin-top: -315px;
+  margin-left: -315px;
+  animation: orbit 4911.8s linear infinite;
+}
+.neptune::before {
+  height: 10px;
+  width: 10px;
+  background: #175e9e;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+.pluto {
+  height: 780px;
+  width: 780px;
+  margin-top: -390px;
+  margin-left: -390px;
+  animation: orbit 7439.7s linear infinite;
+}
+.pluto::before {
+  height: 3px;
+  width: 3px;
+  background: #b5e3e3;
+  margin-top: -1.5px;
+  margin-left: -1.5px;
+}
+.asteroid-belt {
+  height: 300px;
+  width: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  border-color: transparent !important;
+  overflow: hidden;
+  opacity: 0.7;
+  animation: orbit 180s linear infinite;
+}
+.asteroid-belt::before {
+  top: 50%;
+  height: 210px;
+  width: 210px;
+  margin-left: -105px;
+  margin-top: -105px;
+  background: transparent;
+  border-radius: 140px;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
